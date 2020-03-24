@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BonitaSpeechTotText.Models.Data.Camion>
+
+<p>
+    @Html.ActionLink("Create New", "CreateCamions")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Placas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreConductor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Liberar)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Placas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreConductor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Liberar)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditCamions", new { id=item.Id }) |
+            @Html.ActionLink("Details", "DetailsCamions", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteCamions", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

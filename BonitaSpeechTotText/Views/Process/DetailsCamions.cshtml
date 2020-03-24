@@ -1,0 +1,43 @@
+﻿@model BonitaSpeechTotText.Models.Data.Camion
+
+@{
+    ViewBag.Title = "DetailsCamions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailsCamions</h2>
+
+<div>
+    <h4>Camion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Placas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreConductor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreConductor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Liberar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Liberar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "IndexCamions")
+</p>
